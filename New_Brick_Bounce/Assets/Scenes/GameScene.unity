@@ -841,9 +841,31 @@ Prefab:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1951691216830706, guid: f7ade42e7b4952d44870b952878409f5, type: 2}
+      propertyPath: m_TagString
+      value: Goal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7ade42e7b4952d44870b952878409f5, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1302500847 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1951691216830706, guid: f7ade42e7b4952d44870b952878409f5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1302500846}
+--- !u!114 &1302500848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1302500847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17be457a04ab2604fb0fac3e723231da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goal: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &1398840034
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,6 +966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1398840034}
+  goal: {fileID: 1302500847}
 --- !u!54 &1398840040
 Rigidbody:
   m_ObjectHideFlags: 0

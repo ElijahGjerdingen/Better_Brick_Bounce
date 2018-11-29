@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour {
     public GameObject player;
+    public GameObject goal;
 
     int startPosition;
     bool directionChosen;
     Vector2 startPos;
     Vector2 endingPos;
     Vector2 direction;
+    Collider cylCollider;
+    bool goalTriggered = false;
 
     // Use this for initialization
     void Start () {
-        
-	}
+        cylCollider = goal.GetComponent<CapsuleCollider>();
+        cylCollider.isTrigger = true;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -39,7 +43,14 @@ public class MovePlayer : MonoBehaviour {
         }
         if(directionChosen)
         {
-            player.GetComponent<Rigidbody>().AddForce(direction);
+            player.GetComponent<Rigidbody>().AddForce((direction.x/2), player.transform.position.y, (direction.y/2));
         }
 	}
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Goal")
+        {
+            goalTriggered = true;
+        }
+    }
 }

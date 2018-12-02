@@ -9,6 +9,14 @@ public class MovePlayer : MonoBehaviour
     public GameObject goal;
     public Text victoryText;
     public Text movedText;
+    public Text returnText;
+    public Text restartText;
+    public Image tenMoved;
+    public Image sevenMoved;
+    public Image fourMoved;
+    public Image returnMenu;
+    public Image restart;
+
 
     float currentVolY = 0f;
     float currentVolX = 0f;
@@ -68,10 +76,29 @@ public class MovePlayer : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        returnMenu.enabled = true;
+        returnText.enabled = true;
+        restart.enabled = true;
+        restartText.enabled = true;
         if (other.tag == "Goal")
         {
             goalTriggered = true;
             victoryText.enabled = true;
+            if(moves < 4)
+            {
+                tenMoved.enabled = true;
+                sevenMoved.enabled = true;
+                fourMoved.enabled = true;
+            }
+            else if(moves < 7)
+            {
+                tenMoved.enabled = true;
+                sevenMoved.enabled = true;
+            }
+            else if(moves < 10)
+            {
+                tenMoved.enabled = true;
+            }
         }
     }
 }

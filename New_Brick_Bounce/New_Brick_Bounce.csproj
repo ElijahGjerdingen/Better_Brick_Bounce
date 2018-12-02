@@ -292,6 +292,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ChangeMusicVolume.cs" />
+    <Compile Include="Assets\PopulateGrid.cs" />
     <Compile Include="Assets\Scripts\ActiveStateToggler.cs" />
     <Compile Include="Assets\Scripts\ApplicationManager.cs" />
     <Compile Include="Assets\Scripts\ChangeColor.cs" />
@@ -308,6 +310,7 @@
     <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
     <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
     <Compile Include="Assets\Scripts\Spinner.cs" />
+    <Compile Include="Assets\Scripts\TestModalWindow.cs" />
     <Compile Include="Assets\Scripts\TiltWindow.cs" />
   </ItemGroup>
   <ItemGroup>

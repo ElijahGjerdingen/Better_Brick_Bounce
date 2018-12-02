@@ -28,7 +28,8 @@ public class PopulateGrid : MonoBehaviour {
         {
             newObject = (GameObject)Instantiate(prefab, transform);     // transform is the parent
             //newObject.GetComponent<Button>().image.color = Random.ColorHSV();
-            newObject.GetComponentInChildren<Text>().text = "Level " + (i+1);
+            //newObject.GetComponentInChildren<Text>().text = "Level " + (i+1);
+            newObject.GetComponentInChildren<Text>().text = " ";
             newObject.GetComponent<Button>().onClick.AddListener(delegate
             {
                 LoadSceneOnClick click = new LoadSceneOnClick();
